@@ -1,6 +1,7 @@
 ---
 import { Markdown } from 'astro/components';
 import Counter from './Counter.jsx';
+import Footer from './footer.vue';
 ---
 <article>
 <center><img src="https://americanshootingjournal.com/img/AMLogo.png" width="300" height="68" alt=""></center>
@@ -16,9 +17,7 @@ import Counter from './Counter.jsx';
   <Counter client:visible />
 
   <section>
-    <p>
-    
-    </p>
+    <footer:visible />
   </section>
     
 </article>
