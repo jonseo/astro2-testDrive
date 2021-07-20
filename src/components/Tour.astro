@@ -2,6 +2,14 @@
 import { Markdown } from 'astro/components';
 import Counter from './Counter.jsx';
 import Footer from './footer.vue';
+
+const name = 'Boobs';
+
+const sandideas = [
+        'HamStack',
+        'SteamMan',
+        'Big1ne'
+];
 ---
 <article>
 <center><img src="https://americanshootingjournal.com/img/AMLogo.png" width="300" height="68" alt=""></center>
@@ -11,6 +19,12 @@ import Footer from './footer.vue';
       Hell Yea! Get Sum!!
       
     </Markdown>
+    <ul>
+    {sandideas.map((idea) => {
+    <li>{idea}</li>
+    })}
+    
+    </ul>
   </section>
 
   <!-- This Counter will only load the client side JS when it is visible on the page -->
