@@ -62,3 +62,9 @@ const { title, excerpt, featured_img, link } = Astro.props as Props;
     object-fit: cover;
   }
 </style>
+<!-- This Counter will only load the client side JS when it is visible on the page -->
+  <Counter client:visible />
+
+  <section>
+    <footer:visible />
+  </section>
