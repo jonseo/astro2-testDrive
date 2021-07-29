@@ -67,6 +67,12 @@ const remoteData = await fetch('https://americanshootingjournal.com/wp-json/wp/v
 
   
   </main>
-  <footer:visible />
+  <!-- This Counter will only load the client side JS when it is visible on the page -->
+  <Counter client:visible />
+
+  <section>
+    <footer:visible />
+  </section>
+  <!--footer:visible /-->
 </body>
 </html>
