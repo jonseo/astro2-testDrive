@@ -2,8 +2,9 @@
 import Tour from '../components/Tour.astro';
 import Card from '../components/Card.astro';
 
-
 let title = 'Test Driving Astro Builder!';
+
+const remoteData = await fetch('https://nwsportsmanmag.com/wp-json/wp/v2/posts?per_page=4&_embed').then((res) => res.json());
 ---
 
 <html lang="en">
@@ -27,6 +28,45 @@ let title = 'Test Driving Astro Builder!';
     </header>
 
     <Tour />
+    
+     <div class="grid">
+      {remoteData.map((post) => {
+        return(
+          <Card 
+            title={post.title.rendered}
+            link={post.link}
+            excerpt={post.excerpt.rendered}
+            featured_img={post._embedded['wp:featuredmedia'][0].media_details.sizes['medium'].source_url}
+          />
+        )
+      })}
+    </div>
+
+        <style>
+            /*pre {
+                overflow-x: scroll;
+                width: 450px;
+            }*/
+           .grid {
+        margin: 4rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        @media (max-width: 550px) {
+          grid-template-columns: repeat(1, 1fr);
+          margin: 2rem;
+        }
+        gap: 5rem;
+        column-gap: 10px;  
+        row-gap: 10px;      
+      }
+        @media screen and (max-width: 500px) {
+  column {
+    width: 100%;
+  }
+}
+      
+</style>
+
     <footer:visible />
   </main>
 </body>
