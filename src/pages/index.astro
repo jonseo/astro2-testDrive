@@ -27,9 +27,7 @@ const remoteData = await fetch('https://americanshootingjournal.com/wp-json/wp/v
       </div>
     </header>
 
-    <Tour />
-    
-     <div class="grid">
+   <div class="grid">
       {remoteData.map((post) => {
         return(
           <Card 
@@ -67,7 +65,7 @@ const remoteData = await fetch('https://americanshootingjournal.com/wp-json/wp/v
       
 </style>
 
-    
+<Tour />    
   </main>
   <footer:visible />
 </body>
