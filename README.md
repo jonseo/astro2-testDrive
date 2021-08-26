@@ -4,7 +4,7 @@
 
 This is an Astro (v0.17.2) starter project based on the [Astro Starter Kit](https://github.com/snowpackjs/astro/tree/main/examples/starter), with a `netlify.toml` configuration included, and an example React component + CSS Module.
 
-Here's the tutorial article from Cassidy Williams, [here's an introductory blog post](https://dev.to/cassidoo/build-wicked-fast-sites-with-astro-an-introduction-173j)!
+Here's the tutorial from Cassidy Williams, [introductory blog post](https://dev.to/cassidoo/build-wicked-fast-sites-with-astro-an-introduction-173j)!
 
 ## Clone and Deploy
 
