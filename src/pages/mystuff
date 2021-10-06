@@ -1,0 +1,73 @@
+---
+//import Tour from '../components/Tour.astro';
+import Card from '../components/Card.astro';
+
+let title = 'Test Driving Astro Builder!';
+
+const remoteData = await fetch('https://public-api.wordpress.com/rest/v1.1/sites/spidermarket2.wordpress.com/posts?per_page=6&_embed').then((res) => res.json());
+---
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{title}</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/style/global.css">
+  <link rel="stylesheet" href="/style/home.css">
+</head>
+
+<body>
+  <main>
+    <header>
+      <!--div>
+        <img width="60" height="80" src="/assets/logo.svg" alt="Astro logo">
+        
+      </div-->
+    </header>
+<Tour />
+   <div class="grid">
+      {remoteData.map((post) => {
+        return(
+          <Card 
+            title={post.title.rendered}
+            link={post.link}
+            excerpt={post.excerpt.rendered}
+            featured_img={post._embedded['wp:featuredmedia'][0].media_details.sizes['medium'].source_url}
+          />
+        )
+      })}
+    </div>
+
+        <style>
+            /*pre {
+                overflow-x: scroll;
+                width: 450px;
+            }*/
+           .grid {
+        margin: 4rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        @media (max-width: 550px) {
+          grid-template-columns: repeat(1, 1fr);
+          margin: 2rem;
+        }
+        gap: 5rem;
+        column-gap: 10px;  
+        row-gap: 10px;      
+      }
+        @media screen and (max-width: 500px) {
+  column {
+    width: 100%;
+  }
+}
+      
+</style>
+
+  
+  </main>
+  
+ 
+</body>
+</html>
