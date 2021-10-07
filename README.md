@@ -24,5 +24,5 @@ All commands are run from the root of the project, from a terminal:
 
 <br/>
 <br/>
-Tinkering with this [AmSJ demo](https://astro2.netlify.app/)
+Tinkering with this <a href="https://astro2.netlify.app/">AmSJ demo</a>
 
