@@ -12,12 +12,6 @@ You can instantly clone this to your GitHub and deploy it by clicking this butto
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/cassidoo/astro-netlify-starter)
 
-Or, if you'd like to just use the CLI and not deploy just yet, you can use `create-astro` with this as a template:
-
-```bash
-npm init astro my-new-project --template cassidoo/astro-netlify-starter
-```
-
 ## Commands
 
 All commands are run from the root of the project, from a terminal:
