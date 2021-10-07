@@ -23,5 +23,5 @@ All commands are run from the root of the project, from a terminal:
 | `npm run build` | Build your production site to `./dist/`     |
 
 
-Tinkering with this [AmSJ demo] (https://astro2.netlify.app/)
+Tinkering with this [AmSJ demo](https://astro2.netlify.app/)
 Feel free to check [the Astro documentation](https://github.com/snowpackjs/astro)!
