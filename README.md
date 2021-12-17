@@ -1,4 +1,4 @@
-# Astro + Netlify Starter
+# Astro + Netlify Fun Starter
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9e561573-ed5f-4ef9-86d1-e098fa22429f/deploy-status)](https://app.netlify.com/sites/astro-netlify/deploys)
 
