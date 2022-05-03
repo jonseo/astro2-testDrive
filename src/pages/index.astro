@@ -34,7 +34,7 @@ const remoteData = await fetch('https://americanshootingjournal.com/wp-json/wp/v
             title={post.title.rendered}
             link={post.link}
             excerpt={post.excerpt.rendered}
-            featured_img={post._embedded['wp:featuredmedia'][0].media_details.sizes['medium'].source_url}
+            featured_img={post._embedded['wp:featuredmedia'][0].media_details.sizes['small'].source_url}
           />
         )
       })}
