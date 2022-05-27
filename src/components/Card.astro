@@ -38,8 +38,7 @@ const { title, excerpt, featured_img, link } = Astro.props as Props;
       padding: 0 1.5rem 1.5rem 1.5rem;
     }
   }
-  /* BUG? I needed to use TWICE the width here
-     The container actually swaps at 450px
+  /* BUG? 
   */
   @container (min-width: 550px) {
     .card-body {
