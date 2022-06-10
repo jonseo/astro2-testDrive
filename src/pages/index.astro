@@ -1,6 +1,7 @@
 ---
 import Tour from '../components/Tour.astro';
 import Card from '../components/Card.astro';
+import Footer from '../components/Footer/Footer.vue';
 
 let title = 'Test Driving w Astro Builder!';
 
@@ -67,7 +68,7 @@ const remoteData = await fetch('https://americanshootingjournal.com/wp-json/wp/v
       
 </style>
 
-  
+ <Footer client:visible />  
   </main>
   
  
